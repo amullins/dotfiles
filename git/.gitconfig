@@ -1,0 +1,37 @@
+[user]
+	signingkey =
+	name = Andy Mullins
+	email = andym@betenbough.com
+[core]
+	attributesfile = ~/.gitattributes
+	autocrlf = true
+	ignorecase = false
+[diff]
+	guitool = vscode
+[difftool "vscode"]
+	cmd = code --wait --diff $LOCAL $REMOTE
+[merge]
+	guitool = vscode
+	tool = vsdiffmerge
+[mergetool "vscode"]
+	cmd = code --wait $MERGED
+[fetch]
+	prune = false
+[rebase]
+	autoStash = false
+	autosquash = false
+	updateRefs = false
+[gpg]
+	program = C:/Program Files/GnuPG/bin/gpg.exe
+[safe]
+	directory = *
+[commit]
+	template = ~/.gitmessage
+	gpgsign = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[init]
+	defaultBranch = master
